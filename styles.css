@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    outline: red 1px solid;
+}
+
+:root{
+    --primary-color:#f0f0eb;
+    --secondary-color:#697377;
+    --thirdly-color:#42be54;
+    --fouth-color:#6f818a;
+    --fifth-color:#1a151d;
+}
+
+
+body{
+    background-color: var(--primary-color);
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.hero__nav{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
