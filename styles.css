@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
 :root{
-    --primary-color:#eeeeed;
+    --primary-color:#ebebd4;
     --secondary-color:#697377;
     --thirdly-color:#42be54;
     --fouth-color:#6f818a;
@@ -16,7 +16,12 @@
     
     
     font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell;     
+    
+    /* Modo Claro */
     color: var(--fifth-color);
+    
+    /* Modo Oscuro */
+    /* color: var(--primary-color); */
     
     
     /* outline: red 1px solid; */
@@ -70,16 +75,13 @@ p{
 .hero__nav{
     display:flex;
     flex-direction: column;
-
-    gap: 0.3px;
     
     padding: .5em 0 .5em .5em;
     
 
     list-style: inside;
     
-    text-align: center;
-    font-size: clamp(0.5em, 5vw, 1.5em);
+    font-size: clamp(0.3em, 4.8vw, 1.5em);
     font-weight: 400;
 }
 
