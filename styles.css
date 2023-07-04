@@ -119,6 +119,9 @@ footer p{
     border: none;
 }
 
+section p{
+    box-shadow: 1px 1px 5px 1px var(--thirdly-color);
+}
 
 
 @media (min-width:775px){
@@ -149,8 +152,6 @@ section{
     margin-right: 5vw;
 }
 
-section p{
-    box-shadow: 1px 1px 5px 1px var(--thirdly-color);
-}
+
 
 }
