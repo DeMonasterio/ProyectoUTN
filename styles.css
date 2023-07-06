@@ -10,6 +10,7 @@
     --fifth-color:#1a151d;
 }
 
+
 *{
     margin: 0;
     padding: 0;
@@ -44,7 +45,7 @@ header{
 }
 
 .header__color{
-    background-color: #1a151d65;
+    background-color: #00000098;
 }
 
 
@@ -83,6 +84,9 @@ section p{
 }
 
 
+
+/* Titulo H1 */
+
 .title{
     color: var(--thirdly-color);
     font-style: italic;
@@ -92,6 +96,7 @@ section p{
     padding: .5em .5em  .5em .5em ;
 }
 
+/* MENÚ y lista */
 
 .hero__nav{
     display:flex;
@@ -110,21 +115,21 @@ section p{
 
 .hero__nav li {
     color: var(--primary-color);
-
     padding: 0.5em;
-    transition: all 0.3s ease-in-out;
 }
 
 .hero__nav li:hover{
+    transition: .3s ;
+
     color:var(--thirdly-color);
     background-color: var(--fifth-color);
-    font-style: italic;
     
-    font-size: clamp(0.5em, 5vw, 1.2em);
+    font-style: italic;
+    transform: scale(1.1);
 } 
 
 
-
+/* titles tambien afectá a "menú" */
 
 
 .titles{
@@ -147,12 +152,13 @@ main .titles{
 
 }
 
-#firstsection h2{
+/* Solo para sacarle el margen a el primer h2 */
+#section_quees h2{
     margin-top: 0;
 }
 
 
-
+/* Estilo que debe tener el footer */
 
 footer{
     margin-top: 1em;
@@ -166,15 +172,21 @@ footer p{
 }
 
 
-@media (min-width:775px){
-    
-}
+
+
+
+
+
+
+
+
 
 
 @media (min-width:1024px){
     
 .hero__nav{
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 
@@ -182,17 +194,21 @@ footer p{
     padding-top: 1em;
 }
 
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+}
+
 .titles{
     text-align: center;
 }
 
-section{
-    padding-top: 3em;
-    display: flex;
-    flex-direction: column;
-    margin-left: 5vw;
-    margin-right: 5vw;
-}
 
 
 
