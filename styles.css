@@ -6,7 +6,7 @@
     --primary-color:#ebebd4;
     --secondary-color:#697377;
     --thirdly-color:#42be54;
-    --fouth-color:#6f818a;
+    --fouth-color:#9ee198;
     --fifth-color:#1a151d;
 }
 
@@ -33,7 +33,7 @@
 
 body{ 
     /* background-color: var(--fifth-color); */
-    background-color: var(--primary-color);
+    background-color: var(--fouth-color);
 }
 
 header{
@@ -42,6 +42,12 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.header__color{
+    background-color: #1a151d65;
+}
+
+
 
 a{
     color: inherit;
@@ -60,6 +66,7 @@ p{
     padding: .5em;
     border: 1px var(--thirdly-color) solid;
     border-radius: 1px;
+    background-color: var(--primary-color);
     
 
 
@@ -67,6 +74,11 @@ p{
     font-size: clamp(0.5em, 5vw, 1.5em);
     text-align: justify;
 
+}
+
+
+section p{
+    box-shadow: 1px 1px 5px 1px var(--thirdly-color);
 }
 
 
@@ -97,8 +109,6 @@ p{
 
 .hero__nav li {
     color: var(--primary-color);
-    background-color: #1a151dda;
-    border-radius: 50px;
 
     padding: 0.5em;
     transition: all 0.3s ease-in-out;
@@ -125,7 +135,6 @@ p{
     font-weight: 600;
     
     padding: .5em;
-
     
 }
 
@@ -152,10 +161,7 @@ footer{
 footer p{
     color: var(--primary-color);
     border: none;
-}
-
-section p{
-    box-shadow: 1px 1px 5px 1px var(--thirdly-color);
+    background-color: #1a151d;
 }
 
 
