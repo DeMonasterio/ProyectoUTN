@@ -24,16 +24,24 @@
     /* color: var(--primary-color); */
     
     
-    /* outline: red 1px solid; */
+    outline: red 1px solid;
 }
+  
+  
 
 
 
-body{
-    background-color: var(--primary-color);
+body{ 
     /* background-color: var(--fifth-color); */
+    background-color: var(--primary-color);
 }
- 
+
+header{
+    background-image: url(img/wp2166453.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 a{
     color: inherit;
@@ -78,8 +86,9 @@ p{
     
     padding: .5em 0 .5em .5em;
     
-
+    gap: 1px;
     list-style: inside;
+
     
     font-size: clamp(0.3em, 4.8vw, 1.5em);
     font-weight: 400;
@@ -87,6 +96,10 @@ p{
 
 
 .hero__nav li {
+    color: var(--primary-color);
+    background-color: #1a151dda;
+    border-radius: 50px;
+
     padding: 0.5em;
     transition: all 0.3s ease-in-out;
 }
@@ -96,8 +109,11 @@ p{
     background-color: var(--fifth-color);
     font-style: italic;
     
-    font-size: clamp(0.5em, 5vw, 1.3em);
+    font-size: clamp(0.5em, 5vw, 1.2em);
 } 
+
+
+
 
 
 .titles{
@@ -109,7 +125,24 @@ p{
     font-weight: 600;
     
     padding: .5em;
+
+    
 }
+
+main .titles{
+    background-color: var(--fifth-color);
+    
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+}
+
+#firstsection h2{
+    margin-top: 0;
+}
+
+
+
 
 footer{
     margin-top: 1em;
