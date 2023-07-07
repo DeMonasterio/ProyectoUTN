@@ -78,7 +78,7 @@ span{
 
 
 .title{
-    color: var(--thirdly-color);
+    color: var(--primary-color);
     font-style: italic;
     font-weight: 600;
     font-size: clamp(1.5em, 7vw, 5em);
@@ -112,14 +112,12 @@ span{
 }
 
 .hero__nav li:hover{
+
     color: var(--thirdly-color);
-
-
+    
 
     transition: .3s ;
     transform: scale(1.1);
-
-    background-color: var(--fifth-color);
     
     
     font-style: italic;
