@@ -1,233 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap');
-
-:root{
-    --primary-color:#ebebd4;
-    --secondary-color:#8bab88;
-    --thirdly-color:#42be54;
-    /* --fouth-color:#1a151d; */
-    --fouth-color:#708582;
-    --fifth-color:#1a151d;
+:root {
+  --primary-color: #ebebd4;
+  --secondary-color: #8bab88;
+  --thirdly-color: #42be54;
+  /* --fouth-color:#1a151d; */
+  --fouth-color: #708582;
+  --fifth-color: #1a151d;
 }
 
+* {
+  margin: 0;
+  padding: 0;
 
-*{
-    margin: 0;
-    padding: 0;
-    
-    
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell;     
-    
-    /* Modo Claro */
-    color: var(--fifth-color);
-    
-    /* Modo Oscuro */
-    /* color: var(--primary-color); */
-    
-    
-    /* outline: red 1px solid; */
-}
-  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen,
+    Ubuntu, Cantarell;
 
-body{ 
-    /* background-color: var(--fifth-color); */
-    background-color: var(--primary-color);
+  /* Modo Claro */
+  color: var(--fifth-color);
+
+  /* Modo Oscuro */
+  /* color: var(--primary-color); */
+
+  /* outline: red 1px solid; */
 }
 
-header{
-    background-image: url(img/wp2166453.jpg);
-    background-position: right;
-    background-size: cover;
-    background-repeat: no-repeat;
+body {
+  /* background-color: var(--fifth-color); */
+  background-color: var(--primary-color);
 }
 
-.header__color{
-    background-color: #00000098;
+header {
+  background-image: url(img/wp2166453.jpg);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-a{
-    color: inherit;
-    text-decoration: none;
- 
+.header__color {
+  background-color: #00000098;
 }
 
-p{
-    margin: 0 .5em 0 .5em;
-    padding: .5em;
-    
-    background-color: var(--);
-    
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
+p {
+  margin: 0 0.5em 0 0.5em;
+  padding: 0.5em;
 
-    font-weight: 400;
-    font-size: clamp(0.5em, 5vw, 1.5em);
-    text-align: justify;
+  background-color: var(--);
 
+  font-weight: 400;
+  font-size: clamp(0.5em, 5vw, 1.5em);
+  text-align: justify;
+}
+
+span {
+  background-color: var(--fifth-color);
+  color: var(--primary-color);
+  font-style: italic;
 }
 
 /* Titulo H1 */
+.title {
+  color: var(--primary-color);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.5em, 7vw, 5em);
+
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+/* Menú y CUANDO LO HAGA, botón de hamburguesa */
 
 
-span{
-    background-color: var(--fifth-color);
-    color: var(--primary-color);
-    font-style: italic;
+
+
+
+.header_menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  font-size: clamp(0.5em, 5vw, 1.5em);
+}
+
+.header_menu h2 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+  color: var(--thirdly-color);
+  font-style: italic;
 }
 
 
-
-.title{
-    color: var(--primary-color);
-    font-style: italic;
-    font-weight: 600;
-    font-size: clamp(1.5em, 7vw, 5em);
-
-    padding: .5em .5em  .5em .5em ;
+.header__checkbox{
+    display: none;
 }
 
-/* MENÚ y lista */
+.header__checkbox:checked + .header__label .header__icon{
+    position: absolute;
+    width: 35px;
 
-.hero__nav{
-    display:flex;
+}
+
+.header__checkbox:checked + .header__label .header__icon:nth-child(1){
+    top: 20px;
+    transform: rotate(45deg);
+    
+    transition: all .3s;
+}
+
+
+.header__checkbox:checked + .header__label .header__icon:nth-child(2){
+    bottom: 17px;
+    transform: rotate(-45deg);
+    
+    transition: all .3s;
+}
+
+.header__checkbox:checked + .header__label .header__icon:nth-child(3){
+    opacity: 0;
+}
+
+.header__checkbox:checked ~ .hero__nav{
+    display: flex;
+}
+
+
+.header__label{
+    display: flex;
+
     flex-direction: column;
-    
-    padding: .5em 0 .5em .5em;
-    
-    flex-grow: 0;
-    flex-shrink: 0;
 
-    gap: 1px;
-    list-style: inside;
+    position: relative;
 
-    
-    font-size: clamp(0.3em, 4.8vw, 1.5em);
-    font-weight: 400;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    /* background-color: red; */
 }
 
+.header__icon{
+    background-color: var(--thirdly-color);
+    height: 3px;
+    width: 30px;
+
+}
+
+
+
+/* Aquí la lista */
+
+.hero__nav {
+
+  display: none;
+  flex-direction: column;
+
+  padding: 0.5em 0 0.5em 0.5em;
+
+width: calc(100% - .5em);
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  gap: 1px;
+  list-style: inside;
+
+  font-size: clamp(0.3em, 4.8vw, 1em);
+  font-weight: 400;
+}
+
+/* lista */
 
 .hero__nav li {
-    color: var(--primary-color);
-    padding: 0.5em;
+  color: var(--primary-color);
+  padding: 0.5em;
+  font-style: italic;
 }
 
-.hero__nav li:hover{
+.hero__nav li:hover {
+  color: var(--thirdly-color);
 
-    color: var(--thirdly-color);
-    
-
-    transition: .3s ;
-    transform: scale(1.1);
-    
-    
-    font-style: italic;
-} 
-
-
-/* titles tambien afectá a "menú" */
-
-
-.titles{
-    color: var(--thirdly-color);
-    text-align: justify;
-    
-    font-size: clamp(0.5em, 5vw, 1.5em); 
-    font-style: italic;
-    font-weight: 600;
-    
-    padding: .5em;
-    
-}
-
-main .titles{
-    
-    color: var(--primary-color);
-    background-color: var(--fifth-color);
-    
-    margin-top: 2em;
-    margin-bottom: 2em;
+  transition: linear .2s;
 
 }
 
+/* titles */
 
-.secondary__titles{
-    color: var(--primary-color);
-    background-color: var(--fouth-color);
-    font-style: italic;
-    padding: .5em;
+.titles {
+  color: var(--thirdly-color);
+  text-align: justify;
 
-    margin-top: .5em;
-    margin-bottom: .5em;
+  font-size: clamp(0.5em, 5vw, 1.5em);
+  font-style: italic;
+  font-weight: 600;
 
-    font-weight: 600;
+  padding: 0.5em;
 }
 
+main .titles {
+  color: var(--primary-color);
+  background-color: var(--fifth-color);
 
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
+.secondary__titles {
+  color: var(--primary-color);
+  background-color: var(--fouth-color);
+  font-style: italic;
+  padding: 0.5em;
 
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 
+  font-weight: 600;
+}
 
 /* Solo para sacarle el margen a el primer h2 */
-#section_quees h2{
-    margin-top: 0;
+#section_quees h2 {
+  margin-top: 0;
 }
-
 
 /* Estilo que debe tener el footer */
 
-footer{
-    margin-top: 1em;
-    background-color: var(--fifth-color);
+footer {
+  margin-top: 1em;
+  background-color: var(--fifth-color);
 }
 
-footer p{
-    color: var(--primary-color);
-    border: none;
-    background-color: #1a151d;
+footer p {
+  color: var(--primary-color);
+  border: none;
+  background-color: #1a151d;
 }
 
 
 
 
+@media (min-width: 1024px) {
+
+    .header__label{
+        opacity: 0;
+        pointer-events: none;
+    }
 
 
 
 
 
 
-
-
-@media (min-width:1024px){
-    
-.hero__nav{
+  .hero__nav {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-}
+  }
 
-
-.hero__nav li{
+  .hero__nav li {
     padding-top: 1em;
-}
+  }
 
-section{
+  section {
     display: flex;
     flex-direction: column;
-}
+  }
 
-p{
+  p {
     margin-left: 5vw;
     margin-right: 5vw;
+  }
 
-}
-
-.titles{
+  .titles {
     text-align: center;
-}
+  }
 
-.secondary__titles{
+  .secondary__titles {
     text-align: center;
-}
-
-
-
+  }
 }
