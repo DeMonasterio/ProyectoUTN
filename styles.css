@@ -63,6 +63,21 @@ span {
   font-style: italic;
 }
 
+picture{
+  display: flex;
+  justify-content: center;
+  
+}
+
+picture img{
+  margin: 1.5em;
+  padding: .5em;
+  background-color: var(--fouth-color);
+  height: 194px;
+  width: 259px;
+}
+
+
 /* Titulo H1 */
 .title {
   color: var(--primary-color);
@@ -172,7 +187,7 @@ span {
 
   padding: 0.5em 0 0.5em 0.5em;
 
-width: calc(100% - .5em);
+  width: calc(100% - .5em);
   flex-grow: 0;
   flex-shrink: 0;
 
@@ -225,8 +240,7 @@ main .titles {
   font-style: italic;
   padding: 0.5em;
 
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 2em;
 
   font-weight: 600;
 }
@@ -254,15 +268,10 @@ footer p {
 
 @media (min-width: 1024px) {
 
-    .header__label{
-        opacity: 0;
-        pointer-events: none;
-    }
-
-
-
-
-
+  .header__label{
+      opacity: 0;
+      pointer-events: none;
+  }
 
   .hero__nav {
     display: flex;
