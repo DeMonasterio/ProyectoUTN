@@ -1,0 +1,13 @@
+
+
+
+
+/* Clase se ponen con . */
+
+*{
+    outline: 1px red solid;
+}
+
+.ejemplonoe{
+    display: flex;
+}

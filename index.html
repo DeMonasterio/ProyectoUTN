@@ -12,96 +12,98 @@
       <div class="header__color">
         <h1 class="title">Introducción a los conceptos básicos de la física</h1>
 
-        <nav>
-          <div class="header_menu">
-            <h2>Menú</h2>
-
-            <input
-              type="checkbox"
-              name=""
-              id="toggle"
-              class="header__checkbox"
-            />
-            <label
-              for="toggle"
-              class="header__label"
-              aria-label="Botón Menú Desplegable"
-            >
-              <span class="header__icon"></span>
-              <span class="header__icon"></span>
-              <span class="header__icon"></span>
-            </label>
-
-            <ul class="hero__nav">
-              <li>
-                <a href="#section_quees" aria-label="Botón ¿Qué es la física?"
-                  >¿Qué es la física?
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#section_paraque"
-                  aria-label="Botón ¿Para qué se utiliza la física?"
-                >
-                  ¿Para qué se utiliza la física?
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#section_conceptos"
-                  aria-label="Botón ¿Conceptos teoricos o resolver ejercicios?"
-                >
-                  ¿Conceptos teoricos o resolver ejercicios?
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#section_masa"
-                  aria-label="Botón Masa, magnitudes y sistemas físicos"
-                >
-                  Masa, magnitudes y sistemas físicos
-                </a>
-              </li>
-
-              <li>
-                <a href="#section_energia" aria-label="Botón La energía"
-                  >La energía
-                </a>
-              </li>
-
-              <li>
-                <a href="#section_fuerza" aria-label="Botón Fuerza">Fuerza </a>
-              </li>
-
-              <li>
-                <a href="#section_movimiento" aria-label="Botón Movimiento"
-                  >Movimiento
-                </a>
-              </li>
-
-              <li>
-                <a href="#section_newton" aria-label="Botón Leyes de Newton"
-                  >Leyes de Newton
-                </a>
-              </li>
-
-              <li>
-                <a href="#section_gravedad" aria-label="Botón Gravedad"
-                  >Gravedad
-                </a>
-              </li>
-
-              <li>
-                <a href="#section_ondas" aria-label="Botón Ondas">Ondas </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        
       </div>
     </header>
+    
+    <nav>
+      <div class="header_menu">
+        <h2>Menú</h2>
+
+        <input
+          type="checkbox"
+          name=""
+          id="toggle"
+          class="header__checkbox"
+        />
+        <label
+          for="toggle"
+          class="header__label"
+          aria-label="Botón Menú Desplegable"
+        >
+          <span class="header__icon"></span>
+          <span class="header__icon"></span>
+          <span class="header__icon"></span>
+        </label>
+
+        <ul class="hero__nav">
+          <li>
+            <a href="#section_quees" aria-label="Botón ¿Qué es la física?"
+              >¿Qué es la física?
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#section_paraque"
+              aria-label="Botón ¿Para qué se utiliza la física?"
+            >
+              ¿Para qué se utiliza la física?
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#section_conceptos"
+              aria-label="Botón ¿Conceptos teoricos o resolver ejercicios?"
+            >
+              ¿Conceptos teoricos o resolver ejercicios?
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#section_masa"
+              aria-label="Botón Masa, magnitudes y sistemas físicos"
+            >
+              Masa, magnitudes y sistemas físicos
+            </a>
+          </li>
+
+          <li>
+            <a href="#section_energia" aria-label="Botón La energía"
+              >La energía
+            </a>
+          </li>
+
+          <li>
+            <a href="#section_fuerza" aria-label="Botón Fuerza">Fuerza </a>
+          </li>
+
+          <li>
+            <a href="#section_movimiento" aria-label="Botón Movimiento"
+              >Movimiento
+            </a>
+          </li>
+
+          <li>
+            <a href="#section_newton" aria-label="Botón Leyes de Newton"
+              >Leyes de Newton
+            </a>
+          </li>
+
+          <li>
+            <a href="#section_gravedad" aria-label="Botón Gravedad"
+              >Gravedad
+            </a>
+          </li>
+
+          <li>
+            <a href="#section_ondas" aria-label="Botón Ondas">Ondas </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <main>
       <section id="section_quees">
@@ -427,17 +429,17 @@
           el futuro uwu).
           <br />
         </p>
-        <iframe
-          src="https://www.youtube.com/embed/3AF_8Y5yS4U"
-          title="YouTube video player"
-          width="560"
-          height="315"
-          aria-label="Video sobre energía térmica"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          style="display: block; margin-left: auto; margin-right: auto"
-        ></iframe>
+        <div class="iframe__container">
+          <iframe
+            src="https://www.youtube.com/embed/3AF_8Y5yS4U"
+            title="YouTube video player"
+            aria-label="Video sobre energía térmica"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+
+          ></iframe>
+        </div>
 
         <h2 class="secondary__titles">Energía química</h2>
         <p>
@@ -604,11 +606,11 @@
           Al observar este lindo <span>bora al piso chocado</span> podemos ver
           como la energía cinetica que tenía el auto se
           <span>convierte</span> en fuerza especificamente de colision.
-          <br>
-          La fuerza de colisión actúa en dirección opuesta al movimiento del auto,
-          generando una desaceleración brusca hay que tener en cuenta que la
-          fuerza de colisión depende de la velocidad, la masa y la
-          rigidez de los objetos involucrados en el impacto uwu.
+          <br />
+          La fuerza de colisión actúa en dirección opuesta al movimiento del
+          auto, generando una desaceleración brusca hay que tener en cuenta que
+          la fuerza de colisión depende de la velocidad, la masa y la rigidez de
+          los objetos involucrados en el impacto uwu.
           <br />
           Eso sería una explicacion sencilla de lo que es la fuerza, sin
           embargo, en la seccion de las leyes de newton voy a explicar un poco

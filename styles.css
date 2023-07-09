@@ -16,6 +16,11 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen,
     Ubuntu, Cantarell;
 
+    scroll-padding-top: calc(5vw * 30);
+    /* EN 320 HASTA 480 */
+  /* font-size: clamp(0.5em, 5vw, 1.5em); */
+
+
   /* Modo Claro */
   color: var(--fifth-color);
 
@@ -32,13 +37,20 @@ body {
 
 header {
   background-image: url(img/wp2166453.jpg);
-  background-position: right;
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .header__color {
   background-color: #00000098;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--fifth-color);
+  z-index: 1;
 }
 
 a {
@@ -63,20 +75,28 @@ span {
   font-style: italic;
 }
 
-picture{
+picture {
   display: flex;
   justify-content: center;
-  
 }
 
-picture img{
+picture img {
   margin: 1.5em;
-  padding: .5em;
+  padding: 0.5em;
   background-color: var(--fouth-color);
   height: 194px;
   width: 259px;
 }
 
+.iframe__container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.iframe__container iframe {
+  transform: scale(1.1);
+}
 
 /* Titulo H1 */
 .title {
@@ -89,10 +109,6 @@ picture img{
 }
 
 /* Menú y CUANDO LO HAGA, botón de hamburguesa */
-
-
-
-
 
 .header_menu {
   display: flex;
@@ -118,62 +134,70 @@ picture img{
   font-style: italic;
 }
 
-
-.header__checkbox{
-    display: none;
+.header__checkbox {
+  display: none;
 }
+/*  */
 
-.header__checkbox:checked + .header__label .header__icon{
-    position: absolute;
-    width: 35px;
-
-}
-
-.header__checkbox:checked + .header__label .header__icon:nth-child(1){
-    top: 20px;
-    transform: rotate(45deg);
-    
-    transition: all .3s;
+.header__checkbox:not(:checked) + .header__label .header__icon {
+  transform: scale(1);
+  transition: .7s;
+  width: 35px;
 }
 
 
-.header__checkbox:checked + .header__label .header__icon:nth-child(2){
-    bottom: 17px;
-    transform: rotate(-45deg);
-    
-    transition: all .3s;
+
+
+
+
+/*  */
+.header__checkbox:checked + .header__label .header__icon {
+  position: absolute;
+  width: 35px;
 }
 
-.header__checkbox:checked + .header__label .header__icon:nth-child(3){
-    opacity: 0;
+.header__checkbox:checked + .header__label .header__icon:nth-child(1) {
+  top: 20px;
+  transform: rotate(45deg);
+
+  transition: all 0.3s;
 }
 
-.header__checkbox:checked ~ .hero__nav{
-    display: flex;
+.header__checkbox:checked + .header__label .header__icon:nth-child(2) {
+  bottom: 17px;
+  transform: rotate(-45deg);
+
+  transition: all 0.3s;
 }
 
-
-.header__label{
-    display: flex;
-
-    flex-direction: column;
-
-    position: relative;
-
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    /* background-color: red; */
+.header__checkbox:checked + .header__label .header__icon:nth-child(3) {
+  opacity: 0;
 }
 
-.header__icon{
-    background-color: var(--thirdly-color);
-    height: 3px;
-    width: 30px;
+.header__checkbox:checked ~ .hero__nav {
+  display: flex;
+}
 
+.header__label {
+  display: flex;
+
+  flex-direction: column;
+
+  position: relative;
+
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  /* background-color: red; */
+}
+
+.header__icon {
+  background-color: var(--thirdly-color);
+  height: 3px;
+  width: 30px;
 }
 
 
@@ -181,20 +205,19 @@ picture img{
 /* Aquí la lista */
 
 .hero__nav {
-
   display: none;
   flex-direction: column;
 
   padding: 0.5em 0 0.5em 0.5em;
 
-  width: calc(100% - .5em);
+  width: calc(100% - 0.5em);
   flex-grow: 0;
   flex-shrink: 0;
 
   gap: 1px;
   list-style: inside;
 
-  font-size: clamp(0.3em, 4.8vw, 1em);
+  /* font-size: clamp(0.3em, 4.8vw, 1em); */
   font-weight: 400;
 }
 
@@ -209,8 +232,7 @@ picture img{
 .hero__nav li:hover {
   color: var(--thirdly-color);
 
-  transition: linear .2s;
-
+  transition: linear 0.2s;
 }
 
 /* titles */
@@ -240,7 +262,7 @@ main .titles {
   font-style: italic;
   padding: 0.5em;
 
-  margin-top: 2em;
+  margin-top: 2 em;
 
   font-weight: 600;
 }
@@ -262,15 +284,31 @@ footer p {
   border: none;
   background-color: #1a151d;
 }
+    @media (min-width: 480px){
+     *{
+      scroll-padding-top: calc(10vw * 15);
+     } 
 
+    }
+    @media (min-width: 645px){
+     *{
+      scroll-padding-top: calc(15vw * 7);
+     } 
+
+    }
+    @media (min-width: 880px){
+     *{
+      scroll-padding-top: calc(10vw * 8);
+     } 
+
+    }
 
 
 
 @media (min-width: 1024px) {
-
-  .header__label{
-      opacity: 0;
-      pointer-events: none;
+  .header__label {
+    opacity: 0;
+    pointer-events: none;
   }
 
   .hero__nav {
