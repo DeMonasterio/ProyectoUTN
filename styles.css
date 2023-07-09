@@ -16,10 +16,8 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen,
     Ubuntu, Cantarell;
 
-    scroll-padding-top: calc(5vw * 30);
-    /* EN 320 HASTA 480 */
-  /* font-size: clamp(0.5em, 5vw, 1.5em); */
-
+  /* EN 320 HASTA 480 */
+  scroll-padding-top: calc(5vw * 30);
 
   /* Modo Claro */
   color: var(--fifth-color);
@@ -284,36 +282,33 @@ footer p {
   border: none;
   background-color: #1a151d;
 }
-    @media (min-width: 480px){
-     *{
-      scroll-padding-top: calc(10vw * 15);
-     } 
+    
 
-    }
-    @media (min-width: 645px){
-     *{
-      scroll-padding-top: calc(15vw * 7);
-     } 
 
-    }
-    @media (min-width: 880px){
-     *{
-      scroll-padding-top: calc(10vw * 8);
-     } 
+@media (min-width: 480px){
+*{
+  scroll-padding-top: calc(10vw * 15);
+} 
+}
 
-    }
+@media (min-width: 645px){
+*{
+  scroll-padding-top: calc(15vw * 7);
+} 
+}
+
+@media (min-width: 880px){
+*{
+  scroll-padding-top: calc(10vw * 8);
+} 
+}
 
 
 
 @media (min-width: 1024px) {
-  .header__label {
-    opacity: 0;
-    pointer-events: none;
-  }
 
   .hero__nav {
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
   }
 
@@ -338,4 +333,16 @@ footer p {
   .secondary__titles {
     text-align: center;
   }
+}
+
+@media (min-width: 1200px){
+  *{
+    scroll-padding-top: calc(16vw * 4);
+  } 
+}
+
+@media (min-width: 1495px){
+  *{
+    scroll-padding-top: calc(5vw * 10);
+  } 
 }
